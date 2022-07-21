@@ -17,6 +17,7 @@ class Timer extends React.Component {
     e.preventDefault();
     this.interval = setInterval(() => this.tick(), 1000);
     this.setState(state => ({started: true}));
+    this.props.onChange(true);
   }
 
   componentWillUnmount() {
