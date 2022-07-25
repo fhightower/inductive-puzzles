@@ -4,23 +4,41 @@ class Level1 extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      value: ""
+      value: 0,
+      target: 13,
     };
   };
 
-  handleOnChange = e => {
-    const inputText = e.target.value;
+  checkValue() {
+    if (this.state.value === this.state.target) {
+      this.setState({
+	      value: this.state.value + "- Done!"
+      });
+    }
+  }
+
+  incEven = e => {
     this.setState({
-      value: inputText
-    });
-    console.log(this.props.parentStarted);
-  };
+      value: this.state.value + 2
+    }, this.checkValue);
+  }
+
+  dec = e => {
+    this.setState({
+      value: this.state.value - 1
+    }, this.checkValue);
+  }
 
   render() {
     return (
-	<div>{(this.props.parentStarted && (this.props.level == 1))?
-		<p>abc</p>: 
-		""}</div>
+	<div>{(this.props.parentStarted && (this.props.level === 1))?
+		<div>
+			<button onClick={this.incEven}>one</button>
+			<button onClick={this.dec}>two</button>
+			<p>Current Value: {this.state.value}</p>
+			<p>Target: {this.state.target}</p>
+		</div>
+		: ""}</div>
     )};
 }
 
