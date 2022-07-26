@@ -20,6 +20,10 @@ class Timer extends React.Component {
     this.props.onChange(true);
   }
 
+  stopTimer() {
+    clearInterval(this.interval);
+  }
+
   componentWillUnmount() {
     clearInterval(this.interval);
   }

@@ -13,7 +13,7 @@ class Level1 extends React.Component {
     if (this.state.value === this.state.target) {
       this.setState({
 	      value: this.state.value + "- Done!"
-      });
+      }, this.props.completeLevel);
     }
   }
 
@@ -33,8 +33,8 @@ class Level1 extends React.Component {
     return (
 	<div>{(this.props.parentStarted && (this.props.level === 1))?
 		<div>
-			<button onClick={this.incEven}>one</button>
-			<button onClick={this.dec}>two</button>
+			<button onClick={this.incEven}>a</button>
+			<button onClick={this.dec}>b</button>
 			<p>Current Value: {this.state.value}</p>
 			<p>Target: {this.state.target}</p>
 		</div>
