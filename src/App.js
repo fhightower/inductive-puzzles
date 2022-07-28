@@ -30,7 +30,7 @@ class App extends React.Component {
 	}
 
 	componentWillUnmount() {
-		clearInterval(this.interval);
+		this.stopTimer();
 	}
 
 	completeLevel() {
@@ -41,19 +41,25 @@ class App extends React.Component {
 			level: this.state.level + 1,
 			started: false
 		});
-		console.log("start next level...");
 	}
 
 	render() {
 		return (
 			<div>
-			<p>Level: {this.state.level}</p>
-			<form onSubmit={this.startTimer}>
-			<button>Start</button>
-			</form>
-			{this.state.started ? <p>Seconds: {this.state.seconds}</p>: "Click the button to get started..."}
-			<Level1 level={this.state.level} parentStarted={this.state.started} completeLevel={this.completeLevel}/>
-			<Level2 level={this.state.level} parentStarted={this.state.started} completeLevel={this.completeLevel}/>
+				<p>Level: {this.state.level}</p>
+				{this.state.started ?
+					<p>Seconds: {this.state.seconds}</p>:
+					<div>
+						{this.state.level >= 2 ?
+							<p>Congrats! You finished the puzzle in {this.state.seconds} seconds.</p>:
+							""}
+						<p>Click the button to start level {this.state.level}...</p>
+					</div>}
+				<form onSubmit={this.startTimer}>
+					<button>Start</button>
+				</form>
+				<Level1 level={this.state.level} parentStarted={this.state.started} completeLevel={this.completeLevel}/>
+				<Level2 level={this.state.level} parentStarted={this.state.started} completeLevel={this.completeLevel}/>
 			</div>
 		);
 	}
