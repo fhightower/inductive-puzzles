@@ -5,7 +5,7 @@ class Level1 extends React.Component {
     super(props);
     this.state = {
       value: 0,
-      target: 13,
+      target: 11,
     };
   };
 
