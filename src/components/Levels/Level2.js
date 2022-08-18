@@ -4,8 +4,10 @@ class Level2 extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      value: 0,
-      target: 13,
+      value: -1,
+      target: 11,
+	  prevFib: 1,
+	  nextFib: 1
     };
   };
 
@@ -17,15 +19,18 @@ class Level2 extends React.Component {
     }
   }
 
-  incEven = e => {
-    this.setState({
-      value: this.state.value + 1
-    }, this.checkValue);
+  a = e => {
+	  this.setState({
+		  value: this.state.value + this.state.nextFib,
+		  nextFib: this.state.prevFib + this.state.nextFib,
+		  prevFib: this.state.nextFib
+	  }, this.checkValue);
   }
 
-  dec = e => {
+  b = e => {
     this.setState({
-      value: this.state.value - 1
+	  nextFib: 1,
+	  prevFib: 1
     }, this.checkValue);
   }
 
@@ -33,8 +38,8 @@ class Level2 extends React.Component {
     return (
 	<div>{(this.props.parentStarted && (this.props.level === 2))?
 		<div>
-			<button onClick={this.incEven}>a</button>
-			<button onClick={this.dec}>b</button>
+			<button onClick={this.a}>a</button>
+			<button onClick={this.b}>b</button>
 			<p>Current Value: {this.state.value}</p>
 			<p>Target: {this.state.target}</p>
 		</div>
