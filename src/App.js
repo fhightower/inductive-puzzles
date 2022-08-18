@@ -2,6 +2,7 @@ import React from 'react';
 import './App.css';
 import Level1 from './components/Levels/Level1';
 import Level2 from './components/Levels/Level2';
+import Level3 from './components/Levels/Level3';
 
 class App extends React.Component {
 	constructor(props) {
@@ -59,6 +60,7 @@ class App extends React.Component {
 				</form>
 				<Level1 level={this.state.level} parentStarted={this.state.started} completeLevel={this.completeLevel}/>
 				<Level2 level={this.state.level} parentStarted={this.state.started} completeLevel={this.completeLevel}/>
+				<Level3 level={this.state.level} parentStarted={this.state.started} completeLevel={this.completeLevel}/>
 			</div>
 		);
 	}
