@@ -6,8 +6,7 @@ class Level2 extends React.Component {
     this.state = {
       value: -1,
       target: 11,
-	  prevFib: 1,
-	  nextFib: 1
+	  nextVal: 1
     };
   };
 
@@ -21,18 +20,18 @@ class Level2 extends React.Component {
 
   a = e => {
 	  this.setState({
-		  value: this.state.value + this.state.nextFib,
-		  nextFib: this.state.prevFib + this.state.nextFib,
-		  prevFib: this.state.nextFib
+		  value: this.state.value + this.state.nextVal,
+		  nextVal: this.state.nextVal + 1
 	  }, this.checkValue);
   }
 
   b = e => {
     this.setState({
-	  nextFib: 1,
-	  prevFib: 1
+		value: this.state.value - this.state.nextVal,
+		nextVal: this.state.nextVal + 1
     }, this.checkValue);
   }
+
 
   render() {
     return (
