@@ -37,8 +37,8 @@ class Level3 extends React.Component {
 		<div>
 			<button onClick={this.a}>a</button>
 			<button onClick={this.b}>b</button>
-			<p>Current Value: {this.state.value}</p>
-			<p>Target: {this.state.target}</p>
+			<br/><span>Current Value: {this.state.value}</span><br/>
+			<span>Target: {this.state.target}</span>
 		</div>
 		: ""}</div>
     )};

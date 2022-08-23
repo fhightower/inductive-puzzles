@@ -35,8 +35,8 @@ class Level1 extends React.Component {
 		<div>
 			<button onClick={this.incEven}>a</button>
 			<button onClick={this.dec}>b</button>
-			<p>Current Value: {this.state.value}</p>
-			<p>Target: {this.state.target}</p>
+			<br/><span>Current Value: {this.state.value}</span><br/>
+			<span>Target: {this.state.target}</span>
 		</div>
 		: ""}</div>
     )};

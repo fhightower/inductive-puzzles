@@ -32,15 +32,14 @@ class Level2 extends React.Component {
     }, this.checkValue);
   }
 
-
   render() {
     return (
 	<div>{(this.props.parentStarted && (this.props.level === 2))?
 		<div>
 			<button onClick={this.a}>a</button>
 			<button onClick={this.b}>b</button>
-			<p>Current Value: {this.state.value}</p>
-			<p>Target: {this.state.target}</p>
+			<br/><span>Current Value: {this.state.value}</span><br/>
+			<span>Target: {this.state.target}</span>
 		</div>
 		: ""}</div>
     )};
