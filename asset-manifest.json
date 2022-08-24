@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/static/css/main.31d6cfe0.css",
-    "main.js": "/static/js/main.19be09e6.js",
-    "static/js/787.28cb0dcd.chunk.js": "/static/js/787.28cb0dcd.chunk.js",
-    "index.html": "/index.html",
-    "main.19be09e6.js.map": "/static/js/main.19be09e6.js.map",
-    "787.28cb0dcd.chunk.js.map": "/static/js/787.28cb0dcd.chunk.js.map"
+    "main.css": "/inductive-puzzles/static/css/main.31d6cfe0.css",
+    "main.js": "/inductive-puzzles/static/js/main.7a58333d.js",
+    "static/js/787.28cb0dcd.chunk.js": "/inductive-puzzles/static/js/787.28cb0dcd.chunk.js",
+    "index.html": "/inductive-puzzles/index.html",
+    "main.7a58333d.js.map": "/inductive-puzzles/static/js/main.7a58333d.js.map",
+    "787.28cb0dcd.chunk.js.map": "/inductive-puzzles/static/js/787.28cb0dcd.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.31d6cfe0.css",
-    "static/js/main.19be09e6.js"
+    "static/js/main.7a58333d.js"
   ]
 }
